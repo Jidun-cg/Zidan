@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial Website Sederhana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="icon" href="IMG/favicon.ico">
+  <link rel="stylesheet" href="portofolio.css" />
+  <script src="portofolio.js" defer></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="brand"><span id="brand-typing"></span><span class="cursor">|</span></div>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#129299</button>
+      <div class="nav-links" id="primary-navigation">
+        <a href="index.html#profile">Tentang Saya</a>
+        <a href="index.html#jadwal">Jadwal Kuliah</a>
+        <a href="index.html#sosmed">Media Sosial</a>
+        <a href="mengenal.html">Mengenal HTML & CSS & JS & Tailwind</a>
+        <a href="tutor.html" class="active">Tutorial Membuat Website</a>
+        <a href="kesamdanPesan.html">Kesan & Pesan PemWeb</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container reveal-pop" style="margin-top:70px;">
+    <h1>Tutorial Membuat Website Sederhana</h1>
+    <p style="text-align:center; margin-top:12px;">Tujuan: Membuat halaman sederhana yang menampilkan teks “Hello World” lalu berubah saat tombol diklik</p>
+
+    <div class="container reveal" style="margin-top:24px;">
+      <h2>1) Siapkan Tiga File</h2>
+      <ul style="line-height:1.7;">
+        <li>index.html</li>
+        <li>style.css</li>
+        <li>script.js</li>
+      </ul>
+
+      <h2>2) Isi index.html</h2>
+      <pre style="white-space:pre-wrap; overflow:auto; padding:12px; background:var(--panel-2); border:4px solid #000; outline:4px solid var(--accent); box-shadow:0 4px 0 #000, 0 8px 0 var(--accent);">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Hello World&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;script src="script.js" defer&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1 id="title"&gt;Hello World&lt;/h1&gt;
+  &lt;button id="btn"&gt;Ubah Teks&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </pre>
+
+      <h2>3) Isi style.css</h2>
+      <pre style="white-space:pre-wrap; overflow:auto; padding:12px; background:var(--panel-2); border:4px solid #000; outline:4px solid var(--accent); box-shadow:0 4px 0 #000, 0 8px 0 var(--accent);">
+html, body { height: 100%; }
+body{
+  font-family: 'Press Start 2P', cursive, Arial, sans-serif;
+  background: #0e0e0e; color: #fff;
+  display:flex; align-items:center; justify-content:center;
+  flex-direction:column; gap:16px;
+}
+h1{ font-size: 18px; }
+button{
+  background: #ffd166; color:#000;
+  border:4px solid #000; outline:4px solid #ffd166;
+  padding:10px 12px; cursor:pointer;
+  box-shadow: 0 4px 0 #000, 0 8px 0 #ffd166;
+}
+button:active{ transform: translateY(2px); box-shadow: 0 2px 0 #000, 0 4px 0 #ffd166; }
+      </pre>
+
+      <h2>4) Isi script.js</h2>
+      <pre style="white-space:pre-wrap; overflow:auto; padding:12px; background:var(--panel-2); border:4px solid #000; outline:4px solid var(--accent); box-shadow:0 4px 0 #000, 0 8px 0 var(--accent);">
+document.addEventListener('DOMContentLoaded', () =&gt; {
+  const title = document.getElementById('title');
+  const btn = document.getElementById('btn');
+  btn.addEventListener('click', () =&gt; {
+    title.textContent = 'Hello World (Clicked)!';
+  });
+});
+      </pre>
+
+      <p>Jika ketiga file berada dalam folder yang sama, buka file <code>index.html</code> di browser. Kamu akan melihat teks “Hello World” dan tombol “Ubah Teks”. Klik tombolnya untuk melihat perubahan.</p>
+    </div>
+
+    <div class="container reveal" style="margin-top:24px; text-align:center;">
+      <a class="pixel-button" href="kesamdanPesan.html">Lanjut: Kesan &amp; Pesan ▶</a>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="footer-inner">&copy; 2025 Zidan | Tutorial Pixel Web</div></footer>
+</body>
+</html>

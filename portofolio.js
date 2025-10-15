@@ -33,19 +33,64 @@ typeTick();
     console.warn('Elemen #sapa-container tidak ditemukan.');
     }
 
-  //navbar untuk mobile
-    const toggle = document.querySelector('.nav-toggle');
-    const links = document.querySelector('.nav-links');
-    if (toggle && links) {
-        toggle.addEventListener('click', () => links.classList.toggle('open'));
+  // Navbar untk mobile= toggle + aksesibilitas
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  if (toggle && links) {
+    // Set ARIA attributes
+    toggle.setAttribute('aria-controls', 'primary-navigation');
+    toggle.setAttribute('aria-expanded', 'false');
+
+    function closeMenu(){
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+    function openMenu(){
+      links.classList.add('open');
+      toggle.setAttribute('aria-expanded', 'true');
+    }
+    function toggleMenu(){
+      const isOpen = links.classList.contains('open');
+      isOpen ? closeMenu() : openMenu();
+    }
+    toggle.addEventListener('click', toggleMenu);
+
+    // Tutup setelah klik link (mobile)
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        // Hanya tutup kalau ukuran layar kecil
+        if (window.matchMedia('(max-width:720px)').matches) closeMenu();
+      });
+    });
+    // ESC untuk tutup
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+    // Klik luar untuk tutup
+    document.addEventListener('click', (e) => {
+      if (!links.contains(e.target) && !toggle.contains(e.target)) {
+        if (links.classList.contains('open')) closeMenu();
+      }
+    });
+    // Pastikan di desktop menu selalu terlihat
+    const mq = window.matchMedia('(min-width:721px)');
+    function handleDesk(){
+      if (mq.matches) {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    }
+    mq.addEventListener('change', handleDesk);
+    handleDesk();
   } else {
-        console.warn('Elemen .nav-toggle atau .nav-links tidak ditemukan.');
+    console.warn('Elemen .nav-toggle atau .nav-links tidak ditemukan.');
   }
 
   
     const target = document.getElementById('brand-typing');
     if (target) {
-        const fullText = 'Zidan Ruriano | Ilmu Komputer';
+        const fullText =
+          "Zidan Ruriano | Ilmu Komputer | Infokan Pemabaran";
         const speed = 350;
         let index = 0;
 
@@ -86,6 +131,28 @@ typeTick();
     });
   }catch(e){
     console.warn('Audio init failed', e);
+  }
+
+  // Scroll reveal observe .reveal dan .reveal-pop
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in-view');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal, .reveal-pop').forEach(el => io.observe(el));
+
+  // Scroll ke atas button 
+  const topBtn = document.querySelector('.scroll-top');
+  if (topBtn){
+    const onScroll = () => {
+      if (window.scrollY > 300) topBtn.classList.add('show'); else topBtn.classList.remove('show');
+    };
+    window.addEventListener('scroll', onScroll);
+    onScroll();
+    topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   }
 });
 

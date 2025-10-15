@@ -13,36 +13,60 @@
     <nav class="navbar">
         <div class="nav-inner">
             <div class="brand"><span id="brand-typing"></span><span class="cursor">|</span></div>
-            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-            <div class="nav-links">
+            <button class="nav-toggle" aria-label="Toggle navigation">&#129299</button>
+            <div class="nav-links" id="primary-navigation">
                 <a href="#profile">Tentang Saya</a>
                 <a href="#jadwal">Jadwal Kuliah</a>
                 <a href="#sosmed">Media Sosial</a>
+                <a href="mengenal.html">Mengenal HTML, CSS, JS & Tailwind</a>
+                <a href="tutor.html">Tutorial Membuat Website</a>
+                <a href="kesamdanPesan.html">Kesan & Pesan PemWeb</a>
             </div>
         </div>
     </nav>
-    <div class="container" id="profile" style="margin-top:70px;">
+    <div class="container reveal-pop" id="profile" style="margin-top:70px;">
         <div class="profile">
-            <img src="IMG/zidan.jpg" alt="awikwok"/>
-                <div class="profile-info">
-                    <h1>M ZIDAN RURIANO AG</h1>
-                    <p>Ilmu Komputer | 241401063</p>
-                    <p>KOM: C</p>
-                    <p>Email: Zidanruriano@gmail.com</p>
+            <div class="profile-top">
+                <img src="IMG/zidan.jpg" alt="awikwok"/>
+                <div class="hud hud-embedded">
+                    <div class="hud-title">LV. 67 Zidan</div>
+                    <div class="stat"><span>HP</span><div class="bar hp"><span class="fill" style="width:72%"></span></div></div>
+                    <div class="stat"><span>EXP</span><div class="bar exp"><span class="fill" style="width:15%"></span></div></div>
                 </div>
+            </div>
+            <div class="profile-info">
+                    <h1>M ZIDAN RURIANO AG</h1>
+                    <p>FASILKOM-TI | ILMU KOMPUTER</p>
+                    <p>241401063</p>
+                    <p>KOM C</p>
+                    <p>Zidanruriano@gmail.com</p>
+            </div>
         </div>
     </div>
-	<div class="container">
+    <div class="container reveal" id="tentang">
         <h2>Tentang Saya</h2>
 		<p>Perkenalkan, nama ku M ZIDAN RURIANO AG biasa dipanggil Zidan, aku lahir di payakumbuh, sumatera barat. Makanan favoritku adalah mie ayam, salam kenal semuanya!</p>
-
-        <h2>Hobi</h2>
-		<p>Bermain game dan membaca light novel</p>
-
-        <h2>Motto</h2>
-		<p>A journey of a thousand miles begins with a single step</p>
     </div>
-    <div class="container" id="jadwal">
+    <div class="container reveal" id="hobi">
+        <h2>Hobi</h2>
+		<div class="hobbies">
+            <div class="hobby-card">
+                <img class="hobby-art" src="IMG/novel.jpg" alt="Membaca Novel">
+                <div class="hobby-title">Membaca Novel</div>
+                <div class="hobby-desc">Infokan rekomendasi light novel</div>
+            </div>
+            <div class="hobby-card">
+                <img class="hobby-art" src="IMG/game.jpg" alt="Bermain Game">
+                <div class="hobby-title">Bermain Game</div>
+                <div class="hobby-desc">with +100 mod</div>
+            </div>
+        </div>
+    </div>
+    <div class="container reveal" id="motto">
+        <h2>Motto</h2>
+        <p>A journey of a thousand miles begins with a single step</p>
+    </div>
+    <div class="container reveal" id="jadwal">
         <h2>Jadwal Kuliah</h2>
             <table class="schedule-table">
                 <tr>
@@ -119,7 +143,7 @@
             </table>
         </h2>
     </div>
-    <div class="container" id="sosmed">
+    <div class="container reveal" id="sosmed">
         <h2>Media Sosial</h2>
         <div class="mediasosial">
             <a href="https://web.facebook.com/profile.php?id=100043660132734&locale=id_ID" target="_blank" style="margin:0 10px; text-decoration:none;">
@@ -137,6 +161,22 @@
 
         <span id="sapa-container"></span> 
 	</div>
+    <button class="pixel-button scroll-top" aria-label="Kembali ke atas">Mau ke atas?</button>
+    <div class="iklan">
+        <img class="gif-iklan" src="IMG/apaannih.gif" alt="awikwok">
+        <img class="gif-iklan" src="IMG/boci.gif" alt="awikwok">
+        <img class="gif-iklan" src="IMG/diamondsword.gif" alt="awikwok">
+    </div>
+        <div class="video-embed reveal">
+            <iframe
+            src="https://www.youtube.com/embed/FIYksuvx4lY?si=gXR1lKGgsfiKguJv"
+        title="YouTube video"
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
     <footer class="footer">
         <div class="footer-inner">
             <span>2025 Zidan Ruriano</span> | Ilmu Komputer USU

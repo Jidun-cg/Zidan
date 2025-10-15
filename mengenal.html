@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mengenal HTML, CSS, JS & Tailwind</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="icon" href="IMG/favicon.ico">
+  <link rel="stylesheet" href="portofolio.css" />
+  <script src="portofolio.js" defer></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="brand"><span id="brand-typing"></span><span class="cursor">|</span></div>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#129299</button>
+      <div class="nav-links" id="primary-navigation">
+        <a href="index.html#profile">Tentang Saya</a>
+        <a href="index.html#jadwal">Jadwal Kuliah</a>
+        <a href="index.html#sosmed">Media Sosial</a>
+        <a href="mengenal.html" class="active">Mengenal HTML & CSS & JS & Tailwind</a>
+        <a href="tutor.html">Tutorial Membuat Website</a>
+        <a href="kesamdanPesan.html">Kesan & Pesan PemWeb</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container reveal-pop" style="margin-top:70px;">
+    <h1>Belajar Dasar Web</h1>
+    <p style="text-align:center; margin-top:12px;">Mode Tutorial : <strong>Lv. 1 Pemula Frontend</strong></p>
+    <div class="container reveal" style="margin-top:24px;">
+      <h2>
+        <img src="IMG/html.svg" alt="" class="icon-text" />
+        HTML (Map/Stage)
+      </h2>
+      <p>HTML itu seperti peta level dalam game. HTML menentukan letak objek: platform, pintu, musuh, dan item. Tanpa peta, nggak ada apa apa cuma ruang kosong</p>
+      <h2>
+        <img src="IMG/css.svg" alt="" class="icon-text" />
+        CSS (Tampilan/Skin)
+      </h2>
+      <p>CSS itu skin, warna, dan efek partikel. CSS bikin semuanya terlihat keren, mulai dari tekstur, ukuran, posisi halus, dan animasi kecil. HTML memberi struktur, CSS memberi tampilan</p>
+      <h2>
+        <img src="IMG/js.svg" alt="" class="icon-text" />
+        JavaScript (Logika)
+      </h2>
+      <p>JS menambah interaksi pada website kita seperti toggle menu, efek ketik, scroll reveal, dan suara bip saat hover</p>
+      <h2>
+        <img src="IMG/tailwind.svg" alt="" class="icon-text" />
+        Tailwind (Utility CSS)
+      </h2>
+      <p>Tailwind itu seperti inventory barang yang berisi banyak item siap pakai (utility), dengan Tailwind kita dapat dengan cepat memasang warna, margin, atau tombol tanpa membuat skin dari nol. Jadi kita bisa bangun visual cepat tanpa menulis banyak kode CSS</p>
+    </div>
+    <div class="container reveal" style="margin-top:24px;">
+      <h2>Tabel Ringkas</h2>
+      <table class="schedule-table">
+        <tr><th>Bagian</th><th>Peran</th><th>Contoh</th></tr>
+        <tr><td>HTML</td><td>Struktur</td><td>&lt;section&gt;, &lt;img&gt;</td></tr>
+        <tr><td>CSS</td><td>Gaya</td><td>border, warna, layout</td></tr>
+        <tr><td>JS</td><td>Interaksi</td><td>click, efek, logic</td></tr>
+        <tr><td>Tailwind</td><td>Utility</td><td>class singkat</td></tr>
+      </table>
+    </div>
+    <div class="container reveal" style="margin-top:24px; text-align:center;">
+      <a class="pixel-button" href="tutor.html">Lanjut: Tutorial Website ▶</a>
+    </div>
+  </div>
+  <footer class="footer"><div class="footer-inner">&copy; 2025 Zidan | Belajar Web</div></footer>
+</body>
+</html>
