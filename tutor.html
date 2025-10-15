@@ -87,8 +87,40 @@ document.addEventListener('DOMContentLoaded', () =&gt; {
 
       <p>Jika ketiga file berada dalam folder yang sama, buka file <code>index.html</code> di browser. Kamu akan melihat teks “Hello World” dan tombol “Ubah Teks”. Klik tombolnya untuk melihat perubahan.</p>
     </div>
+  </div>
 
-    <div class="container reveal" style="margin-top:24px; text-align:center;">
+
+  <div class="container reveal" style="margin:24px auto 60px;">
+    <h2>Penjelasan Singkat Properti yang Dipakai</h2>
+    <ul style="line-height:1.8;">
+      <li><strong>padding</strong>: ruang di dalam kotak elemen, antara konten dan border. Contoh <code>padding: 12px</code> memberi jarak dalam 12 piksel.</li>
+      <li><strong>margin</strong>: jarak di luar elemen, memisahkan elemen dengan elemen lain.</li>
+      <li><strong>border</strong>: garis tepi di sekeliling elemen. Contoh <code>border: 4px solid #000</code> membuat garis hitam tebal.</li>
+      <li><strong>outline</strong>: garis di luar border, tidak memengaruhi layout. Cocok untuk efek "border ganda" ala pixel.</li>
+      <li><strong>box-shadow</strong>: bayangan di belakang kotak. Contoh <code>0 4px 0 #000, 0 8px 0 var(--accent)</code> menumpuk dua bayangan sehingga terlihat timbul.</li>
+      <li><strong>font-family</strong>: daftar font yang dipakai. Jika font pertama tidak tersedia, pakai yang berikutnya.</li>
+      <li><strong>display: flex</strong>: mengaktifkan Flexbox untuk mengatur tata letak anak elemen.</li>
+      <li><strong>align-items</strong> dan <strong>justify-content</strong>: menyelaraskan anak elemen secara vertikal dan horizontal dalam Flexbox.</li>
+      <li><strong>gap</strong>: jarak antar anak elemen pada Flexbox/Grid.</li>
+      <li><strong>transform</strong>: mengubah posisi/rotasi/skala. Contoh <code>translateY(2px)</code> menggeser elemen ke bawah 2px saat tombol ditekan.</li>
+      <li><strong>white-space: pre-wrap</strong>: menjaga baris baru/spacing pada teks dan tetap bisa membungkus bila panjang.</li>
+      <li><strong>overflow: auto</strong>: menampilkan scrollbar jika kontennya lebih besar dari kotaknya.</li>
+      <li><strong>&lt;script defer&gt;</strong>: menunda eksekusi JavaScript sampai HTML selesai diparsing, tanpa memblokir pemuatan halaman.</li>
+      <li><strong>document.addEventListener('DOMContentLoaded', ...)</strong>: menjalankan kode JS setelah dokumen siap (elemen sudah tersedia di DOM).</li>
+      <li><strong>textContent</strong>: mengubah teks murni di dalam elemen (tanpa HTML).</li>
+    </ul>
+    <h2>Rekomendasi Video</h2>
+    <div class="video-embed reveal">
+    <iframe
+      src="https://www.youtube.com/embed/kAiX0itnonM?si=i13huDVjee6t7zY2"
+      title="YouTube video tutorial"
+      loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
+   <div class="container reveal" style="margin-top:24px; text-align:center;">
       <a class="pixel-button" href="kesamdanPesan.html">Lanjut: Kesan &amp; Pesan ▶</a>
     </div>
   </div>
